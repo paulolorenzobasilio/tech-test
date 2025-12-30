@@ -31,4 +31,14 @@ class ApplicationFactory extends Factory
             'order_id' => null,
         ];
     }
+
+    public function complete(): ApplicationFactory|Factory
+    {
+        return $this->state(function () {
+           return [
+               'status' => ApplicationStatus::Complete,
+               'order_id' => $this->faker->uuid(),
+           ];
+        });
+    }
 }
