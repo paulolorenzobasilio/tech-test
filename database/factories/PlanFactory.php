@@ -19,7 +19,7 @@ class PlanFactory extends Factory
         return [
             'name' => $this->faker->sentence(rand(1, 3)),
             'type' => $this->faker->randomElement(['nbn', 'opticomm', 'mobile']),
-            'monthly_cost' => $this->faker->numerify('####'),
+            'monthly_cost' => $this->faker->numerify('####.32'),
         ];
     }
 }
