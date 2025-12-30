@@ -16,6 +16,9 @@ class Application extends Model
         'status' => ApplicationStatus::class,
     ];
 
+    // TODO (note): i don't know what this is used for?
+    //  I assume this is trigger before the creation of Application hence the name "ApplicationCreated".
+    //  Will skill the implementation for this
     protected $dispatchesEvents = [
         'created' => ApplicationCreated::class,
     ];
